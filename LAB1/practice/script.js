@@ -1,7 +1,15 @@
 // Fundamental data types
 
-// Typeof
+/*
+booleans
+intergers
+strings
+null.
+33
 
+*/
+// Typeof
+alert(typeof true)
 // Let vs Const vs Var
 
 // Reassignment (no let)
