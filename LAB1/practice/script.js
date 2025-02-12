@@ -20,7 +20,7 @@ alert(typeof true)
 // Additional operations
 
 // User Input
-
+let answer = prompt("whats your name")
 
 // Concatenation v. templates
 

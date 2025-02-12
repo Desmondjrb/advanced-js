@@ -12,17 +12,27 @@ let sibling3 = "Ricardo Montoya De La Rosa Ramirez";
 let game = 15.99;
 let shoes = 89.78;
 
+const prompt = require("prompt-sync")();
 
 
 
 // 1. If divided evenly, how much would each sibling get for the week?
-
+let split = weeklyAllowance/3
+console.log(split)
 // 2. How many games can Jordan buy with their cut?
-
+let games = Math.floor(split/game)
+console.log(games)
 // 3. The cost of games just went up by a dollar and shoes are on sale at 50% (half) off. Change the variables to their new prices.
+game += 1
+shoes /= 2
 
+console.log(game)
+console.log(shoes)
 // 4. Quinn and Ricardo are twins. If they put their money together, how many on sale shoes can they buy in a month (4 weeks)?
-
+let combined = split*2
+combined *= 4
+games = Math.floor(combined/game)
+console.log(games)
 // 5. How many more games can they buy if they put their money together compared to if they had bought games on their own?
 
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
