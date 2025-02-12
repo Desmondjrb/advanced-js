@@ -31,8 +31,8 @@ console.log(shoes)
 // 4. Quinn and Ricardo are twins. If they put their money together, how many on sale shoes can they buy in a month (4 weeks)?
 let combined = split*2
 combined *= 4
-games = Math.floor(combined/game)
-console.log(games)
+let shoe = Math.floor(combined/shoes)
+console.log(shoe)
 // 5. How many more games can they buy if they put their money together compared to if they had bought games on their own?
 
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
