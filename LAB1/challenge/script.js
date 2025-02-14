@@ -123,10 +123,14 @@ console.log(reduceEvens(12));
 // 14. Write a function called shortenString(string) that returns the first 10 characters of a string if it is longer than 10
 //remove all
 const shortenString = (string) => {
-
+if( string.length >= 10){
+    return string.substring(0,11)
+} else{
+    return ""
+}
 }
 
-
+console.log(shortenString("1234567891011"))
 
 // Spicy Challenges
 let burger = 5.00;
@@ -138,17 +142,31 @@ let soda = 1.00;
 /// If no burgers, fries, and sodas can be bought, return "Sorry, no burgers for you."
 
 const buyBurgers = (budget) => {
-
+if( budget >= 1){
+    let burgers = Math.floor(budget / burger)
+    return burgers
+} else{
+    return "sorry, no burgers for you."
+}
 }
 
+console.log(buyBurgers(10))
 // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
 /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
 // Prompt the user for their budget and call the function.
 /// Bonus: Round the answer to the nearest penny.
 const buyMeals = (budget) => {
+let meal = burger + fries + soda
+let meals = Math.floor(budget / meal)
+let remainder = budget % meal
 
+if( budget >= 9){
+    return "you can buy " + meals + " and you have $" + remainder + " left. "
+} else {
+    return "you can't buy any meals."
 }
-
+}
+console.log(buyMeals(18))
 
 // 17. [Challenge] Write a function missingLeg(side1, side2) that takes in the length of a hypotenuse and a leg of a right triangle and prints out the missing leg's length
 // Prompt the user for the two sides and call the function
