@@ -42,30 +42,33 @@ console.log(diff)
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
 console.log( "the three siblings are " + sibling1 + " , " + sibling2 + " , and " + sibling3 )
 // 7. Use console.log() and a built-in method to count how many characters are in Ricardo's name.
-
+console.log(sibling3.length)
 
 // 8. Use console.log() and a built-in method to print out the string "RICARDO MONTOYA DE LA ROSA RAMIREZ"
-
+console.log(sibling3.toUpperCase());
 // 9. Use console.log() and a built-in method to print out the string "ricardo montoya de la rosa ramirez"
-
+console.log(sibling3.toLowerCase());
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
-
+const re = /a/gi;
+console.log(sibling3.replace(re, ""))
 // 11. Use console.log() and a built-in method to print out "De La Rosa"
-
+console.log(sibling3.substring(16, 26))
 // Medium Challenges
 
 // 12. Rewrite these function as an arrow function.
 /// Then, call them with different inputs to check the result.
 
-function getRandomNum() {
+const getRandomNum = () => {
     return Math.floor(Math.random() * 100);
 }
 
-function greeting(name) {
+console.log(getRandomNum(10))
+const greeting = (name) => {
     return `Hello ${name}, I'm glad you can make it!`;
 }
 
-function perfectRoot(x) {
+console.log(greeting("desmond"))
+const perfectRoot = (x) => {
     let root = Math.sqrt(x);
     if (Math.floor(root) === root) {
         return root;
@@ -74,41 +77,49 @@ function perfectRoot(x) {
     }
 }
 
+console.log(perfectRoot(49))
 // 13. Fix/Finish the following functions.
 /// Then, call them with at least 2 different inputs to ensure they work.
 
 /// a. Adds 2 numbers and returns the sum
 const addNums = (x, y) => {
-    let sum = x + y;
+    return x + y;
 }
+console.log(addNums(5, 5))
+console.log(addNums(10, 5));
 // uncomment the line below, to call the function, and add one more function call
-// console.log( addNums(4, 6) );
+console.log( addNums(4, 6) );
 
 
 /// b. Prints a special message if name is "Beyonce"
 const isBeyonce = (name) => {
-    // if( ) { 
-    //     return "Welcome Queen!";
-    // } else {
-    //     return `Sorry {name}, you're not Beyonce`;
-    // }
+    if( name == "Beyonce") { 
+        return "Welcome Queen!";
+    } else {
+        return `Sorry ${name}, you're not Beyonce`;
+    }
 }
 // Test "Beyonce" and other names to ensure it works
+console.log(isBeyonce("Beyonce"))
+console.log(isBeyonce("loser"));
+console.log(isBeyonce("Desmond"))
 
 
 
 /// c. If the number is even, return the number divided by 2, otherwise, return the number
 /// For example reduceEvens(10) => 5 -- reduceEvens(11) => 11
 const reduceEvens = (x) => {
-    // if( ){
+    if( x % 2 == 0){
+        return x/2
 
-    // } else {
-    //     return x;
-    // }
+    } else {
+        return x;
+    }
 }
 //Write your own function calls
-
-
+console.log(reduceEvens(10))
+console.log(reduceEvens(11));
+console.log(reduceEvens(12));
 // 14. Write a function called shortenString(string) that returns the first 10 characters of a string if it is longer than 10
 //remove all
 const shortenString = (string) => {
