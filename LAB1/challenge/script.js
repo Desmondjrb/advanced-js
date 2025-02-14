@@ -172,8 +172,18 @@ console.log(buyMeals(18))
 // Prompt the user for the two sides and call the function
 /// The larger side should be the hypotenuse  
 
-
-
+const missingLeg = (side1, side2) => {
+    if ( side1 > side2){
+      
+        let leg2 = Math.sqrt(side1-side2)
+        return " the missing leg is " + leg2
+    } else {
+        leg2 = Math.sqrt(side2-side1)
+        return " the missing leg is " + leg2;
+        
+    }
+}
+console.log(missingLeg(18, 20))
 // 18. [Super Challenge] In math, Factorial is the product of an integer and all the integers below it.
 /// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
 /// Write a function factorial(x) that finds the factorial of any integer.
