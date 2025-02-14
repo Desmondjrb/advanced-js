@@ -30,14 +30,19 @@ console.log(game)
 console.log(shoes)
 // 4. Quinn and Ricardo are twins. If they put their money together, how many on sale shoes can they buy in a month (4 weeks)?
 let combined = split*2
-combined *= 4
-let shoe = Math.floor(combined/shoes)
+let combinedAll = combined * 4
+let shoe = Math.floor(combinedAll/shoes)
 console.log(shoe)
 // 5. How many more games can they buy if they put their money together compared to if they had bought games on their own?
+let gamesTogether = combined/game
+let gamesAlone = split/game
 
+let diff = Math.floor(gamesTogether-gamesAlone)
+console.log(diff)
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
-
+console.log( "the three siblings are " + sibling1 + " , " + sibling2 + " , and " + sibling3 )
 // 7. Use console.log() and a built-in method to count how many characters are in Ricardo's name.
+
 
 // 8. Use console.log() and a built-in method to print out the string "RICARDO MONTOYA DE LA ROSA RAMIREZ"
 
